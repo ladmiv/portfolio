@@ -224,7 +224,7 @@ BUTTON-UP
   position: fixed;
   right: 0;
   bottom: 50px;
-  z-index: 100;
+  z-index: 15;
   
   display: none;
   padding: 0 20px 0 20px;

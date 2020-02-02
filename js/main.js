@@ -92,6 +92,8 @@ $(document).ready(function () {
     $('.burger_item:last-child').toggleClass('burger_item--last');
   });
   
+  $("#phone").mask("+7 (999) 999-99-99");
+  
   //========================MODAL======================================
   
   let callBtn = $('.btn_js');
