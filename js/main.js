@@ -8,6 +8,7 @@ $(document).ready(function () {
 
   $(window).scroll(function() {
     let scrollCost = $('#cost').offset().top;
+    let buttonUp = $('.button-up');
 
     if($(this).scrollTop() + $(window).height() >= scrollCost) {
       $('.elements_cost:first-child').removeClass('elem_cost1');
@@ -15,6 +16,12 @@ $(document).ready(function () {
       $('.elements_cost:nth-child(3)').removeClass('elem_cost3');
       $('.elements_cost:nth-child(4)').removeClass('elem_cost4');
       $('.elements_cost:nth-child(5)').removeClass('elem_cost5');
+    }
+    
+    if ($(this).scrollTop() > 50) {
+        $(buttonUp).fadeIn();
+    } else {
+        $(buttonUp).fadeOut();
     }
   });
 
@@ -83,6 +90,64 @@ $(document).ready(function () {
     $('.burger_item:first-child').toggleClass('burger_item--first');
     $('.burger_item:nth-child(2)').toggleClass('burger_item--midl');
     $('.burger_item:last-child').toggleClass('burger_item--last');
-  })
+  });
+  
+  //========================MODAL======================================
+  
+  let callBtn = $('.btn_js');
+  let overlayModal = $('.overlay');
+  let body = $('body');
+  
+  function bodyClean() {
+    $(body).removeAttr('style');
+  }
+  
+  $(callBtn).on('click', function() {
+    $(overlayModal).css('display', 'block');
+    $(body).css('overflow', 'hidden');
+  });
+  
+  $('.modal-close').on('click', function() {
+    $(overlayModal).removeAttr('style');
+    bodyClean();
+  });
+  
+  $(document).keydown(function(e) {
+		if (e.keyCode === 27) {
+			e.stopPropagation();
+			$(overlayModal).removeAttr('style');
+		}
+		bodyClean();
+	});
+  
+  $(overlayModal).on('click', function(e) {
+		if ($(e.target).closest('.modal').length === 0) {
+			$(this).removeAttr('style');					
+		}
+		bodyClean();
+	});
+	
+	$('.modal_form').submit(function(event) {
+	  event.preventDefault();
+	  $.ajax({
+	    type: "POST",
+	    url: "mailer/smart.php",
+	    data: $(this).serialize()
+	  }).done(function() {
+	    $(this).find("input").val("");
+	    alert("Сообщение успешно отправлено!");
+	    $('.modal_form').trigger('reset');
+	  })
+	  return false;
+	});
+	
+	//========================button-up======================================
+    
+  $('.button-up').click(function () {
+    $('body,html').animate({
+        scrollTop: 0
+    }, 500);
+    return false;
+  });
 
 });

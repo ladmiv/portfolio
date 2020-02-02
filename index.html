@@ -27,6 +27,39 @@
   </head>
 
   <body>
+    <div class="button-up">
+      <span>Наверх</span>
+    </div>
+
+    <div class="overlay">
+      <div class="messages"></div>
+      
+      <div class="modal">
+        <div class="modal-title">Заказать звонок</div>
+        
+        <span class="modal-close"></span>
+        
+        <form class="modal_form" action="mailer/smart.php" method="post">
+          <div class="form_group">
+            <label for="name" class="visually-hidden">Ваше имя</label>
+            <input id="name" class="field" name="name" type="text" required placeholder="Имя">
+          </div>
+          
+          <div class="form_group">
+            <label for="phone" class="visually-hidden">Ваш телефон</label>
+            <input id="phone" class="field" name="phone" type="tel" required placeholder="Телефон">
+          </div>
+          
+          <div class="form_group">
+            <label for="email" class="visually-hidden">Ваш телефон</label>
+            <input id="email" class="field" name="email" type="email" required placeholder="Email">
+          </div>
+          
+          <button class="modal_btn" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+    
     <header class="header">
       <span class="elements elem1">&#123;&nbsp;&#125;</span>
       <span class="elements elem2">&#60;div&#62;</span>
@@ -61,11 +94,11 @@
           </nav>
 
           <div class="header_info">
-            <a href="tel:+74999955577" class="header_phone">+7 (499) 995-55-77</a>
+            <a href="tel:+79258320227" class="header_phone">+7 (925) 832-02-27</a>
 
-            <button class="btn btn_out header_info__btn">Заказать звонок</button>
+            <button class="btn btn_out header_info__btn btn_js">Заказать звонок</button>
 
-            <button class="btn btn_hide" aria-label="Заказать звонок">
+            <button class="btn btn_hide btn_js" aria-label="Заказать звонок">
               <span class="btn_hide__inner">
                 <i class="demo-icon icon-phone btn_hide__icon"></i>
               </span>
@@ -107,7 +140,7 @@
               <h2 class="subheading">Frontend-разработчик и веб-верстальщик</h2>
             </hgroup>
 
-            <button class="btn btn_fill header_bottom__btn">Узнать больше</button>
+            <a href="#services" class="btn btn_fill header_bottom__btn">Узнать больше</a>
           </div>
         </div>
       </div>
@@ -135,7 +168,7 @@
           </li>
         </ul>
 
-        <button class="btn btn_fill services_btn">Узнать стоимость</button>
+        <a href="#cost" class="btn btn_fill services_btn">Узнать стоимость</a>
       </div>
     </section>
 
@@ -227,7 +260,7 @@
           <div class="swiper-pagination"></div>
         </div>
 
-        <button class="btn btn_fill portfolio_btn">Заказать проект</button>
+        <button class="btn btn_fill portfolio_btn btn_js">Заказать проект</button>
       </div>
     </section>
 
@@ -253,31 +286,31 @@
           <nav class="footer_nav">
             <ul class="footer_nav__list">
               <li class="footer_nav__item">
-                <a href="#" class="footer_nav__link">Услуги</a>
+                <a href="#services" class="footer_nav__link">Услуги</a>
               </li>
 
               <li class="footer_nav__item">
-                <a href="#" class="footer_nav__link">Портфолио</a>
+                <a href="#portfolio" class="footer_nav__link">Портфолио</a>
               </li>
 
               <li class="footer_nav__item">
-                <a href="#" class="footer_nav__link">Стоимость</a>
+                <a href="#cost" class="footer_nav__link">Стоимость</a>
               </li>
             </ul>
           </nav>
 
           <div class="footer_info">
-            <a href="tel:+74999955577" class="phone footer_phone">
-              <i class="demo-icon icon-phone footer_phone__icon"></i>+7 (499) 995-77-55
+            <a href="tel:+79258320227" class="phone footer_phone">
+              <i class="demo-icon icon-phone footer_phone__icon"></i>+7 (925) 832-02-27
             </a>
 
-            <a href="mailto:dmitry@alekseev.com" class="footer_info__mail">
-              <i class="demo-icon icon-mail"></i>dmitry@alekseev.com
+            <a href="mailto:larkoff.d@yandex.ru" class="footer_info__mail">
+              <i class="demo-icon icon-mail"></i>larkoff.d@yandex.ru
             </a>
           </div>
 
           <div class="footer_social">
-            <button class="btn btn_out btn_footer">Заказать звонок</button>
+            <button class="btn btn_out btn_footer btn_js">Заказать звонок</button>
 
             <ul class="footer_social__list">
               <li class="footer_social__item">
