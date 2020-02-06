@@ -1,0 +1,26 @@
+{
+  "name": "gulp-webinar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "latest",
+    "del": "latest",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-clean-css": "latest",
+    "gulp-cli": "latest",
+    "gulp-concat": "latest",
+    "gulp-notify": "latest",
+    "gulp-rename": "latest",
+    "gulp-rigger": "latest",
+    "gulp-sass": "latest",
+    "gulp-uglify": "latest"
+  },
+  "dependencies": {}
+}

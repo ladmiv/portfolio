@@ -6,18 +6,21 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="build/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="build/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="build/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="build/img/favicon/site.webmanifest">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    
+    <link rel="preload" href="build/fonts/roboto/roboto-v20-cyrillic_latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <link rel="preload" href="build/fonts/roboto/roboto-v20-cyrillic_latin-700.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <link rel="preload" href="build/fonts/roboto/roboto-v20-cyrillic_latin-900.woff2" as="font" type="font/woff2" crossorigin>
 
-    <link rel="stylesheet" href="css/normalize.css">
 
-    <link rel="stylesheet" href="css/swiper.min.css">
-
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="build/css/main.min.css">
 
     <title>Портфолио</title>
 
@@ -110,25 +113,25 @@
       <div class="header_bottom">
         <div class="header_img">
           <picture>
-            <source srcset="img/header/man_bg_320@1x.webp 1x, img/header/man_bg_320@2x.webp 2x" media="(max-width: 320px)" type="image/webp">
+            <source srcset="build/img/header/man_bg_320@1x.webp 1x, build/img/header/man_bg_320@2x.webp 2x" media="(max-width: 320px)" type="image/webp">
 
-            <source srcset="img/header/man_bg_320@1x.png 1x, img/header/man_bg_320@2x.png 2x" media="(max-width: 320px)">
+            <source srcset="build/img/header/man_bg_320@1x.png 1x, build/img/header/man_bg_320@2x.png 2x" media="(max-width: 320px)">
 
-            <source srcset="img/header/man_bg_576@1x.webp 1x, img/header/man_bg_576@2x.webp 2x" media="(max-width: 576px)" type="image/webp">
+            <source srcset="build/img/header/man_bg_576@1x.webp 1x, build/img/header/man_bg_576@2x.webp 2x" media="(max-width: 576px)" type="image/webp">
 
-            <source srcset="img/header/man_bg_576@1x.png 1x, img/header/man_bg_576@2x.png 2x" media="(max-width: 576px)">
+            <source srcset="build/img/header/man_bg_576@1x.png 1x, build/img/header/man_bg_576@2x.png 2x" media="(max-width: 576px)">
 
-            <source srcset="img/header/man_bg_tablet@1x.webp 1x, img/header/man_bg_tablet@2x.webp 2x" media="(max-width: 768px)" type="image/webp">
+            <source srcset="build/img/header/man_bg_tablet@1x.webp 1x, build/img/header/man_bg_tablet@2x.webp 2x" media="(max-width: 768px)" type="image/webp">
 
-            <source srcset="img/header/man_bg_tablet@1x.png 1x, img/header/man_bg_tablet@2x.png 2x" media="(max-width: 768px)">
+            <source srcset="build/img/header/man_bg_tablet@1x.png 1x, build/img/header/man_bg_tablet@2x.png 2x" media="(max-width: 768px)">
 
-            <source srcset="img/header/man_bg_992@1x.webp 1x, img/header/man_bg_992@2x.webp 2x" media="(max-width: 992px)" type="image/webp">
+            <source srcset="build/img/header/man_bg_992@1x.webp 1x, build/img/header/man_bg_992@2x.webp 2x" media="(max-width: 992px)" type="image/webp">
 
-            <source srcset="img/header/man_bg_992@1x.png 1x, img/header/man_bg_992@2x.png 2x" media="(max-width: 992px)">
+            <source srcset="build/img/header/man_bg_992@1x.png 1x, build/img/header/man_bg_992@2x.png 2x" media="(max-width: 992px)">
 
-            <source srcset="img/header/man_bg@1x.webp 1x, img/header/man_bg@2x.webp 2x" type="image/webp">
+            <source srcset="build/img/header/man_bg@1x.webp 1x, build/img/header/man_bg@2x.webp 2x" type="image/webp">
 
-            <img class="header_img__item" alt="Моя фотография" src="img/header/man_bg@1x.png" srcset="img/header/man_bg@2x.png 2x">
+            <img class="header_img__item" alt="Моя фотография" src="build/img/header/man_bg@1x.png" srcset="build/img/header/man_bg@2x.png 2x">
           </picture>
         </div>
 
@@ -186,17 +189,17 @@
               <div class="swiper-slide">
                 <figure class="portfolio_item">
                   <picture>
-                    <source srcset="img/portfolio/portfolio1_mobile@1x.webp 1x, img/portfolio/portfolio1_mobile@2x.webp 2x" media="(max-width: 320px)" type="image/webp">
+                    <source srcset="build/img/portfolio/portfolio1_mobile@1x.webp 1x, build/img/portfolio/portfolio1_mobile@2x.webp 2x" media="(max-width: 320px)" type="image/webp">
 
-                    <source srcset="img/portfolio/portfolio1_mobile@1x.jpg 1x, img/portfolio/portfolio1_mobile@2x.jpg 2x" media="(max-width: 320px)">
+                    <source srcset="build/img/portfolio/portfolio1_mobile@1x.jpg 1x, build/img/portfolio/portfolio1_mobile@2x.jpg 2x" media="(max-width: 320px)">
 
-                    <source srcset="img/portfolio/portfolio1@1x.webp 1x, img/portfolio/portfolio1@2x.webp 2x" media="(max-width: 1199px)" type="image/webp">
+                    <source srcset="build/img/portfolio/portfolio1@1x.webp 1x, build/img/portfolio/portfolio1@2x.webp 2x" media="(max-width: 1199px)" type="image/webp">
 
-                    <source srcset="img/portfolio/portfolio1@1x.jpg 1x, img/portfolio/portfolio1@2x.jpg 2x" media="(max-width: 1199px)">
+                    <source srcset="build/img/portfolio/portfolio1@1x.jpg 1x, build/img/portfolio/portfolio1@2x.jpg 2x" media="(max-width: 1199px)">
 
-                    <source srcset="img/portfolio/portfolio1_desktop@1x.webp 1x, img/portfolio/portfolio1_desktop@2x.webp 2x" type="image/webp">
+                    <source srcset="build/img/portfolio/portfolio1_desktop@1x.webp 1x, build/img/portfolio/portfolio1_desktop@2x.webp 2x" type="image/webp">
 
-                    <img class="portfolio_img" alt="Сайт психолога Веры Антоновой" src="img/portfolio/portfolio1_desktop@1x.jpg" srcset="img/portfolio/portfolio1_desktop@2x.jpg 2x">
+                    <img class="portfolio_img" alt="Сайт психолога Веры Антоновой" src="build/img/portfolio/portfolio1_desktop@1x.jpg" srcset="build/img/portfolio/portfolio1_desktop@2x.jpg 2x">
                   </picture>
 
                   <figcaption class="portfolio_caption">
@@ -210,17 +213,17 @@
               <div class="swiper-slide">
                 <figure class="portfolio_item">
                   <picture>
-                    <source srcset="img/portfolio/portfolio2_mobile@1x.webp 1x, img/portfolio/portfolio2_mobile@2x.webp 2x" media="(max-width: 320px)" type="image/webp">
+                    <source srcset="build/img/portfolio/portfolio2_mobile@1x.webp 1x, build/img/portfolio/portfolio2_mobile@2x.webp 2x" media="(max-width: 320px)" type="image/webp">
 
-                    <source srcset="img/portfolio/portfolio2_mobile@1x.jpg 1x, img/portfolio/portfolio2_mobile@2x.jpg 2x" media="(max-width: 320px)">
+                    <source srcset="build/img/portfolio/portfolio2_mobile@1x.jpg 1x, build/img/portfolio/portfolio2_mobile@2x.jpg 2x" media="(max-width: 320px)">
 
-                    <source srcset="img/portfolio/portfolio2@1x.webp 1x, img/portfolio/portfolio2@2x.webp 2x" media="(max-width: 1199px)" type="image/webp">
+                    <source srcset="build/img/portfolio/portfolio2@1x.webp 1x, build/img/portfolio/portfolio2@2x.webp 2x" media="(max-width: 1199px)" type="image/webp">
 
-                    <source srcset="img/portfolio/portfolio2@1x.jpg 1x, img/portfolio/portfolio2@2x.jpg 2x" media="(max-width: 1199px)">
+                    <source srcset="build/img/portfolio/portfolio2@1x.jpg 1x, build/img/portfolio/portfolio2@2x.jpg 2x" media="(max-width: 1199px)">
 
-                    <source srcset="img/portfolio/portfolio2_desktop@1x.webp 1x, img/portfolio/portfolio2_desktop@2x.webp 2x" type="image/webp">
+                    <source srcset="build/img/portfolio/portfolio2_desktop@1x.webp 1x, build/img/portfolio/portfolio2_desktop@2x.webp 2x" type="image/webp">
 
-                    <img class="portfolio_img" alt="Сайт магазина детской одежды" src="img/portfolio/portfolio2_desktop@1x.jpg" srcset="img/portfolio/portfolio2_desktop@2x.jpg 2x">
+                    <img class="portfolio_img" alt="Сайт магазина детской одежды" src="build/img/portfolio/portfolio2_desktop@1x.jpg" srcset="build/img/portfolio/portfolio2_desktop@2x.jpg 2x">
                   </picture>
 
                   <figcaption class="portfolio_caption">
@@ -234,17 +237,17 @@
               <div class="swiper-slide">
                 <figure class="portfolio_item">
                   <picture>
-                    <source srcset="img/portfolio/portfolio3_mobile@1x.webp 1x, img/portfolio/portfolio3_mobile@2x.webp 2x" media="(max-width: 320px)" type="image/webp">
+                    <source srcset="build/img/portfolio/portfolio3_mobile@1x.webp 1x, build/img/portfolio/portfolio3_mobile@2x.webp 2x" media="(max-width: 320px)" type="image/webp">
 
-                    <source srcset="img/portfolio/portfolio3_mobile@1x.jpg 1x, img/portfolio/portfolio3_mobile@2x.jpg 2x" media="(max-width: 320px)">
+                    <source srcset="build/img/portfolio/portfolio3_mobile@1x.jpg 1x, build/img/portfolio/portfolio3_mobile@2x.jpg 2x" media="(max-width: 320px)">
 
-                    <source srcset="img/portfolio/portfolio3@1x.webp 1x, img/portfolio/portfolio3@2x.webp 2x" media="(max-width: 1199px)" type="image/webp">
+                    <source srcset="build/img/portfolio/portfolio3@1x.webp 1x, build/img/portfolio/portfolio3@2x.webp 2x" media="(max-width: 1199px)" type="image/webp">
 
-                    <source srcset="img/portfolio/portfolio3@1x.jpg 1x, img/portfolio/portfolio3@2x.jpg 2x" media="(max-width: 1199px)">
+                    <source srcset="build/img/portfolio/portfolio3@1x.jpg 1x, build/img/portfolio/portfolio3@2x.jpg 2x" media="(max-width: 1199px)">
 
-                    <source srcset="img/portfolio/portfolio3_desktop@1x.webp 1x, img/portfolio/portfolio3_desktop@2x.webp 2x" type="image/webp">
+                    <source srcset="build/img/portfolio/portfolio3_desktop@1x.webp 1x, build/img/portfolio/portfolio3_desktop@2x.webp 2x" type="image/webp">
 
-                    <img class="portfolio_img" alt="Сайт магазина «Рыболов»" src="img/portfolio/portfolio3_desktop@1x.jpg" srcset="img/portfolio/portfolio3_desktop@2x.jpg 2x">
+                    <img class="portfolio_img" alt="Сайт магазина «Рыболов»" src="build/img/portfolio/portfolio3_desktop@1x.jpg" srcset="build/img/portfolio/portfolio3_desktop@2x.jpg 2x">
                   </picture>
 
                   <figcaption class="portfolio_caption">
@@ -338,12 +341,6 @@
       <p class="copyright_text">&copy; Дмитрий Алексеев, 2016 – 2018</p>
     </div>
 
-    <script src="js/jquery-3.4.1.min.js"></script>
-    
-    <script src="js/jquery.maskedinput.min.js"></script>
-
-    <script src="js/swiper.min.js"></script>
-
-    <script src="js/main.js"></script>
+    <script src="build/js/all.js"></script>
   </body>
 </html>
