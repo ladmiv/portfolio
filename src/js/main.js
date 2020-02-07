@@ -1,6 +1,7 @@
-//= lib/jquery-3.4.1.min.js
-//= lib/jquery.maskedinput.min.js
-//= lib/swiper.min.js
+//= ../../components/js/jquery-3.4.1.min.js
+//= ../../components/js/jquery.maskedinput.min.js
+//= ../../components/js/swiper.min.js
+
 $(document).ready(function () {
 
   $('.elements:first-child').removeClass('elem1');
