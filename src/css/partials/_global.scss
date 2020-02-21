@@ -1,0 +1,108 @@
+html {box-sizing: border-box;}
+
+*,
+*::before,
+*::after {box-sizing: inherit;}
+
+body {
+  min-width: 320px;
+  margin: 0;
+
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.429;
+  color: $body-color-txt;
+
+  background-color: #fff;
+}
+
+img {max-width: 100%;}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+
+  font-size: 80px;
+  font-weight: normal;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+
+  font-size: 54px;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+
+  font-size: inherit;
+  font-weight: normal;
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  transition: all .2s;
+}
+
+.btn_out {
+  padding: 13px 40px;
+
+  color: $bg-pink;
+
+  border: 1px solid $bg-pink;
+  &:hover {
+    color: #fff;
+
+    background-color: $bg-pink;
+  }
+}
+
+.btn_fill {
+  padding: 0 70px;
+
+  display: inline-block;
+  font-size: 18px;
+  line-height: 3.27;
+  color: #fff;
+
+  background-color: $bg-terracotta;
+  border: 1px solid transparent;
+  &:hover {
+    color: $bg-terracotta;
+
+    background-color: transparent;
+    border: 1px solid $bg-terracotta;
+  }
+}

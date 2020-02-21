@@ -1,0 +1,77 @@
+@import "../../components/css/normalize.css";
+@import "../../components/css/swiper.min.css";
+@import "partials/mixins";
+@import "partials/variables";
+
+/*=================================
+FONTS
+=================================*/
+
+@import "partials/fonts/fontello/fontello";
+@import "partials/fonts/roboto/roboto";
+
+/*=================================
+MAIN STYLES
+=================================*/
+
+@import "partials/global";
+
+/*=================================
+BUTTON-UP
+=================================*/
+
+@import "partials/btn-up";
+
+/*=================================
+MODAL
+=================================*/
+
+@import "partials/modal";
+
+/*=================================
+HEADER
+=================================*/
+
+@import "partials/header";
+
+/*=================================
+SERVICES
+=================================*/
+
+@import "partials/services";
+
+/*=================================
+PORTFOLIO
+=================================*/
+
+@import "partials/portfolio";
+
+/*=================================
+SLIDER
+=================================*/
+
+@import "partials/slider";
+
+/*=================================
+COST
+=================================*/
+
+@import "partials/cost";
+
+/*=================================
+FOOTER
+=================================*/
+
+@import "partials/footer";
+
+/*=================================
+COPYRIGHT
+=================================*/
+
+@import "partials/copyright";
+
+/*=================================
+MEDIA
+=================================*/
+
+@import "partials/media";

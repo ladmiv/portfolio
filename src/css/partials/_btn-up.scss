@@ -1,0 +1,42 @@
+.button-up {
+  position: fixed;
+  right: 10px;
+  bottom: 50px;
+  z-index: 15;
+  
+  display: none;
+  padding: 10px;
+  
+  line-height: 30px;
+  
+  border-radius: 4px;
+  
+  box-shadow: 0 2px 4px #999;
+  -webkit-box-shadow: 0 2px 4px #999;
+  -moz-box-shadow: 0 2px 4px #999;
+  -o-box-shadow: 0 2px 4px #999;
+  
+  cursor: pointer;
+  
+  transition: all .2s;
+  
+  &::before {
+    content: "";
+    position: relative;
+    top: 5px;
+
+    display: block;
+    width: 20px;
+    height: 20px;
+
+    border: 2px solid $bg-terracotta;
+    border-right: none;
+    border-bottom: none;
+
+    transform: rotate(45deg);
+  }
+
+  &:hover {
+    background-color: $white-color;
+  }
+}

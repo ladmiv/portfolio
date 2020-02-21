@@ -1,16 +1,1 @@
-
-<svg xmlns="http://www.w3.org/2000/svg" width="815" height="630" viewBox="0 0 815 630">
-  <linearGradient id="linear-gradient" gradientTransform="rotate(13)">
-    <stop offset="0%" stop-color="#ff8f5a"/>
-    
-    <stop offset="100%" stop-color="#ff2f96"/>
-  </linearGradient>
-
-  <path fill="url(#linear-gradient)" 
-    d="M 20 630 
-    q -20 -35 -20 -80 
-    q 5 -140 243 -400
-    q 145 -145 319 -150
-    q 150 2 253 125
-    v 505 Z "/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="815" height="630"><linearGradient id="a" gradientTransform="rotate(13)"><stop offset="0%" stop-color="#ff8f5a"/><stop offset="100%" stop-color="#ff2f96"/></linearGradient><path fill="url(#a)" d="M20 630Q0 595 0 550q5-140 243-400Q388 5 562 0q150 2 253 125v505z"/></svg>

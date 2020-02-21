@@ -1,17 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="920" height="764" viewBox="0 0 920 764">
-  <linearGradient id="linear-gradient" gradientTransform="rotate(13)">
-    <stop offset="0%" stop-color="#ff8f5a"/>
-    
-    <stop offset="100%" stop-color="#ff2f96"/>
-  </linearGradient>
-
-  <path fill="url(#linear-gradient)" 
-    d="M 1, 550 
-    Q 2 457, 111 303 
-    Q 336 -10, 570 1 
-    Q 750 3, 869 200 
-    Q 920 290, 919 380 
-    Q 918 591, 708 708 
-    Q 568 775, 360 760 
-    Q 0 732, 1 550 z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="764"><linearGradient id="a" gradientTransform="rotate(13)"><stop offset="0%" stop-color="#ff8f5a"/><stop offset="100%" stop-color="#ff2f96"/></linearGradient><path fill="url(#a)" d="M1 550q1-93 110-247Q336-10 570 1q180 2 299 199 51 90 50 180-1 211-211 328-140 67-348 52Q0 732 1 550z"/></svg>

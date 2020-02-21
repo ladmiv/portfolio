@@ -1,7 +1,7 @@
+//= partials/app.js
 //= ../../components/js/jquery-3.4.1.min.js
 //= ../../components/js/jquery.maskedinput.min.js
 //= ../../components/js/swiper.min.js
-
 $(document).ready(function () {
 
   $('.elements:first-child').removeClass('elem1');
@@ -45,7 +45,7 @@ $(document).ready(function () {
 
     pagination: {
       el: '.swiper-pagination',
-      type: 'bulvars',
+      type: 'bullets',
       clickable: 'true',
     },
 
@@ -100,9 +100,9 @@ $(document).ready(function () {
   
   //========================MODAL======================================
   
-  var callBtn = $('.btn_js'),
-      overlayModal = $('.overlay'),
-      body = $('body');
+  var callBtn = $('.btn_js');
+  var overlayModal = $('.overlay');
+  var body = $('body');
   
   function bodyClean() {
     $(body).removeAttr('style');

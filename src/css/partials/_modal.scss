@@ -1,0 +1,110 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  
+  display: none;
+  width: 100%;
+  height: 100%;
+  
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  
+  padding: 35px;
+  width: 400px;
+  
+  text-align: center;
+  color: #fff;
+  background-color: $bg-terracotta;
+  
+  transform: translate(-50%, -50%);
+  &-title {
+    margin: 10px 0 15px;
+  
+    font-size: 24px;
+  }
+  &-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    
+    width: 23px;
+    height: 23px;
+    
+    cursor: pointer;
+    &::before {
+      content: '';
+    
+      position: absolute;
+      top: 11px;
+      left: -4px;
+      
+      height: 1px;
+      width: 30px;
+      
+      background-color: #fff;
+
+      transform: rotate(-45deg);
+    }
+    &::after {
+      content: '';
+    
+      position: absolute;
+      top: 11px;
+      left: -4px;
+      
+      height: 1px;
+      width: 30px;
+      
+      background-color: #fff;
+
+      transform: rotate(45deg);
+    }
+  }
+  &_btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 5px 10px;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #fff;
+    
+    cursor: pointer;
+    
+    transition: all .3s;
+    &:hover {
+      color: $bg-terracotta;
+      background-color: #fff;
+    }
+  }
+}
+
+.form_group {
+  margin-bottom: 10px;
+}
+
+.field {
+  width: 100%;
+  padding: 5px 10px;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #d5d5d5;
+  &:hover {
+    border-color: #333;
+  }
+}
+
+.messages {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  
+  font-size: 14px;
+  
+  transform: translateX(-50%);
+}

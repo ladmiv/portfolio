@@ -1,71 +1,95 @@
-const gulp = require('gulp');
-const concat = require('gulp-concat');
-const autoprefixer = require('gulp-autoprefixer');
-const cleanCSS = require('gulp-clean-css');
-const uglify = require('gulp-uglify');
-const del = require('del');
-const browserSync = require('browser-sync').create();
-const sass = require('gulp-sass');
-const rename = require('gulp-rename');
-const notify = require('gulp-notify');
-const rigger = require('gulp-rigger');
+var gulp = require('gulp'),
+    prefixer = require('gulp-autoprefixer'),
+    uglify = require('gulp-uglify'),
+    del = require('del'),
+    sass = require('gulp-sass'),
+    rename = require('gulp-rename'),
+    notify = require('gulp-notify'),
+    rigger = require('gulp-rigger'),
+    cssmin = require('gulp-clean-css'),
+    imagemin = require('gulp-imagemin');
 
-const jsFiles = [
-	'./src/js/main.js',
-]
+var path = {
+  build: { //Тут мы укажем куда складывать готовые после сборки файлы
+      html: './',
+      js: 'build/js/',
+      css: 'build/css/',
+      img: 'build/img/',
+      fonts: 'build/fonts/'
+  },
+  src: { //Пути откуда брать исходники
+      html: 'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
+      js: 'src/js/main.js',//В стилях и скриптах нам понадобятся только main файлы
+      style: 'src/css/main.scss',
+      img: 'src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
+      fonts: 'src/fonts/**/*.*'
+  },
+  watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
+      html: 'src/**/*.html',
+      js: 'src/js/**/*.js',
+      style: 'src/css/**/*.scss',
+      img: 'src/img/**/*.*',
+      fonts: 'src/fonts/**/*.*'
+  },
+  clean: './build'
+};
 
-function fonts() {
-  return gulp.src('./src/fonts/**/*.*')
-    .pipe(gulp.dest('./build/fonts/'))
-}
+gulp.task('html:build', function () {
+  return gulp.src(path.src.html) //Выберем файлы по нужному пути
+      .pipe(rigger()) //Прогоним через rigger
+      .pipe(gulp.dest(path.build.html)) //Выплюнем их в папку build
+});
 
-function images() {
-  return gulp.src('./src/img/**/*.*')
-    .pipe(gulp.dest('./build/img/'))
-}
+gulp.task('js:build', function () {
+  return gulp.src(path.src.js) //Найдем наш main файл
+      .pipe(rigger()) //Прогоним через rigger
+      .pipe(rename({
+        suffix: '.min'
+      }))
+      .pipe(uglify()) //Сожмем наш js
+      .pipe(gulp.dest(path.build.js)) //Выплюнем готовый файл в build
+});
 
-function styles() {
-	return gulp.src('./src/scss/**/*.scss')
-		.pipe(sass({
-			outputStyle: 'expanded'
-		}).on("error", notify.onError()))
-		.pipe(rename({
-			suffix: '.min'
-		}))
-		.pipe(autoprefixer({
-			cascade: false,
-		}))
-		.pipe(cleanCSS({
-			level: 2
-		}))
-		.pipe(gulp.dest('./build/css/'))
-}
+gulp.task('style:build', function () {
+  return gulp.src(path.src.style) //Выберем наш main.scss
+      .pipe(sass({
+        
+        outputStyle: 'expanded'
+      }).on("error", notify.onError())) //Скомпилируем
+      .pipe(rename({
+        suffix: '.min'
+      }))
+      .pipe(prefixer({
+        overrideBrowserslist: ['last 3 versions'],
+        cascade: false,
+      })) //Добавим вендорные префиксы
+      .pipe(cssmin({
+        level: 2
+      })) //Сожмем
+      .pipe(gulp.dest(path.build.css)) //И в build
+});
 
-function scripts() {
-	return gulp.src(jsFiles)
-	  .pipe(rigger())
-		.pipe(concat('all.js'))
-		.pipe(uglify({
-      toplevel: true,
-    }))
-		.pipe(gulp.dest('./build/js'))
-}
+gulp.task('image:build', function () {
+  return gulp.src(path.src.img) //Выберем наши картинки
+      .pipe(imagemin())
+      .pipe(gulp.dest(path.build.img)) //И бросим в build
+});
 
-function watch() {
-	gulp.watch('./src/scss/**/*.scss', styles);
-	gulp.watch('./src/js/**/*.js', scripts);
-	gulp.watch('./src/fonts/**/*.*', fonts);
-  gulp.watch('./src/img/**/*.*', images);
-}
+gulp.task('fonts:build', function() {
+  return gulp.src(path.src.fonts)
+      .pipe(gulp.dest(path.build.fonts))
+});
 
-function clean() {
-	return del(['build/*'])
-}
+gulp.task('clean', function() {
+  return del([path.clean])
+});
 
-gulp.task('styles', styles);
-gulp.task('scripts', scripts);
-gulp.task('watch', watch);
-gulp.task('fonts', fonts);
-gulp.task('images', images);
+gulp.task('watch', function() {
+  gulp.watch(path.watch.html, gulp.parallel('html:build'));
+  gulp.watch(path.watch.js, gulp.parallel('js:build'));
+  gulp.watch(path.watch.style, gulp.parallel('style:build'));
+  gulp.watch(path.watch.img, gulp.parallel('image:build'));
+  gulp.watch(path.watch.fonts, gulp.parallel('fonts:build'));
+});
 
-gulp.task('default', gulp.series(clean, gulp.parallel(fonts, images, styles, scripts), 'watch'))
+gulp.task('default', gulp.series('clean', gulp.parallel('html:build', 'js:build', 'style:build', 'image:build', 'fonts:build'), 'watch'))

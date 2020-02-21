@@ -1,0 +1,43 @@
+.portfolio {
+  padding-top: 103px;
+  padding-bottom: 102px;
+
+  text-align: center;
+
+  background-color: #fbfbfb;
+}
+
+.portfolio_title {
+  margin-bottom: 94px;
+}
+
+.portfolio_wrap {
+  position: relative;
+}
+
+.portfolio_item {
+  margin: 0;
+}
+
+.portfolio_img {
+  margin-bottom: 27px;
+}
+
+.portfolio_caption {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.portfolio_caption__link {
+  transition: all .3s;
+}
+
+.portfolio_caption__link:hover {
+  color: #fa0891;
+}
+
+.portfolio_btn {
+  margin-top: 93px;
+  padding-right: 64px;
+  padding-left: 64px;
+}
