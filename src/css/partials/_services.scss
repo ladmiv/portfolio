@@ -2,6 +2,52 @@
   padding: 82px 0;
 
   text-align: center;
+  
+  &_list {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    margin-bottom: 95px;
+  }
+  
+  &_item {
+    margin-right: 45px;
+    padding-top: 92px;
+  
+    background-image: url(../img/monitor-icon.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    
+    &:nth-child(2) {
+      background-image: url(../img/adaptiv-icon.png);
+    }
+    
+    &:nth-child(3) {
+      background-image: url(../img/programming-icon.png);
+    }
+    
+    &:last-child {
+      margin-right: 0;
+    
+      background-image: url(../img/coding-icon.png);
+    }
+  }
+  
+  &_img {
+    margin-bottom: 15px;
+  }
+  
+  &_text {
+    font-size: 20px;
+    color: $body-color-txt;
+  }
+  
+  &_btn {
+    padding-right: 58px;
+    padding-left: 58px;
+  }
 }
 
 .title {
@@ -9,55 +55,4 @@
 
   font-weight: bold;
   color: #262626;
-}
-
-.serices_list {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  justify-content: space-between;
-  -ms-align-items: center;
-  align-items: center;
-
-  margin-bottom: 95px;
-}
-
-.services_item {
-  margin-right: 45px;
-  padding-top: 92px;
-
-  background-image: url(../img/monitor-icon.png);
-  background-repeat: no-repeat;
-  background-position: center top;
-}
-
-.services_item:nth-child(2) {
-  background-image: url(../img/adaptiv-icon.png);
-}
-
-.services_item:nth-child(3) {
-  background-image: url(../img/programming-icon.png);
-}
-
-.services_item:last-child {
-  margin-right: 0;
-
-  background-image: url(../img/coding-icon.png);
-}
-
-.services_img {
-  margin-bottom: 15px;
-}
-
-.services_text {
-  font-size: 20px;
-  color: #8993ad;
-}
-
-
-.services_btn {
-  padding-right: 58px;
-  padding-left: 58px;
 }

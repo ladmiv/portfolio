@@ -1,0 +1,28 @@
+<div class="overlay">
+  <div class="messages"></div>
+  
+  <div class="modal">
+    <div class="modal-title">Заказать звонок</div>
+    
+    <span class="modal-close"></span>
+    
+    <form class="modal_form" action="mailer/smart.php" method="post">
+      <div class="form_group">
+        <label for="name" class="visually-hidden">Ваше имя</label>
+        <input id="name" class="field" name="name" type="text" required placeholder="Имя">
+      </div>
+      
+      <div class="form_group">
+        <label for="phone" class="visually-hidden">Ваш телефон</label>
+        <input id="phone" class="field" name="phone" type="tel" required placeholder="Телефон">
+      </div>
+      
+      <div class="form_group">
+        <label for="email" class="visually-hidden">Ваш телефон</label>
+        <input id="email" class="field" name="email" type="email" required placeholder="Email">
+      </div>
+      
+      <button class="modal_btn" type="submit">Отправить</button>
+    </form>
+  </div>
+</div>

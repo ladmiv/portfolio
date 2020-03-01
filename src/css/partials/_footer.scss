@@ -1,59 +1,73 @@
 .footer {
   padding: 80px 0;
-}
-
-.footer_wrap {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  -o-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.footer_nav {
-  width: 33.7%;
-}
-
-.footer_nav__item {
-  margin-bottom: 8px;
-}
-
-.footer_nav__link {
-  font-size: 18px;
-  color: #8993ad;
-
-  transition: all .2s;
-}
-
-.footer_nav__link:hover {
-  color: #fc557c;
-}
-
-.footer_info {
-  width: 43.2%;
-
-  font-size: 25px;
-  color: #000;
-}
-
-.footer_phone {
-  display: block;
-  margin-bottom: 26px;
-
-  font-weight: 400;
-}
-
-.footer_phone__icon {
-  margin-right: 13px;
-}
-
-.footer_info__mail {
-  display: block;
+  
+  &_wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  &_nav {
+    width: 33.7%;
+    
+    &__item {
+      margin-bottom: 8px;
+    }
+    
+    &__link {
+      font-size: 18px;
+      color: $body-color-txt;
+    
+      transition: all .2s;
+      
+      &:hover {
+        color: $bg-pink;
+      }
+    }
+  }
+  
+  &_info {
+    width: 43.2%;
+  
+    font-size: 25px;
+    color: #000;
+    
+    &__mail {
+      display: block;
+    }
+  }
+  
+  &_phone {
+    display: block;
+    margin-bottom: 26px;
+  
+    font-weight: 400;
+    
+    &__icon {
+      margin-right: 13px;
+    }
+  }
+  
+  &_social__list {
+    display: flex;
+  }
+  
+  &_social__item {
+    margin-right: 11px;
+  }
+  
+  &_social__link {
+    display: block;
+  
+    width: 40px;
+    height: 30px;
+  
+    background-image: url(../img/sprite.png);
+    background-repeat: no-repeat;
+    
+    &:hover {
+      background-position: 0 -30px;
+    }
+  }
 }
 
 .icon-mail {
@@ -72,52 +86,26 @@
   padding: 11px 60px;
 }
 
-.footer_social__list {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-}
-
-.footer_social__item {
-  margin-right: 11px;
-}
-
-.footer_social__link {
-  display: block;
-
-  width: 40px;
-  height: 30px;
-
-  background-image: url(../img/sprite.png);
-  background-repeat: no-repeat;
-}
-
-.footer_social__link:hover {
-  background-position: 0 -30px;
-}
-
 .fb {
   background-position: -40px 0;
-}
-
-.fb:hover {
-  background-position: -40px -30px;
+  
+  &:hover {
+    background-position: -40px -30px;
+  }
 }
 
 .tw {
   background-position: -80px 0;
-}
-
-.tw:hover {
-  background-position: -80px -30px;
+  
+  &:hover {
+    background-position: -80px -30px;
+  }
 }
 
 .ins {
   background-position: -120px 0;
-}
-
-.ins:hover {
-  background-position: -120px -30px;
+  
+  &:hover {
+    background-position: -120px -30px;
+  }
 }

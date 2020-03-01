@@ -17,72 +17,72 @@
   font-weight: 700;
 
   transition: all .5s;
-}
-
-.elements_cost:first-child {
-  top: 14%;
-  left: 6.7%;
-
-  font-size: 48px;
-
-  transform: rotate(28deg);
-}
-
-.elements_cost:first-child.elem_cost1 {
-  top: 0;
-  left: 0;
-}
-
-.elements_cost:nth-child(2) {
-  top: 19%;
-  right:10.8%;
-
-  font-size: 40px;
-
-  transform: rotate(-22deg);
-}
-
-.elements_cost:nth-child(2).elem_cost2 {
-  right: 0;
-}
-
-.elements_cost:nth-child(3) {
-  bottom: 12%;
-  left: 12.8%;
-
-  font-size: 57px;
-
-  transform: rotate(15deg);
-}
-
-.elements_cost:nth-child(3).elem_cost3 {
-  bottom: 0;
-}
-
-.elements_cost:nth-child(4) {
-  right: 5.6%;
-  bottom: 12%;
-
-  font-size: 50px;
-
-  transform: rotate(-20deg);
-}
-
-.elements_cost:nth-child(4).elem_cost4 {
-  right: 0;
-}
-
-.elements_cost:nth-child(5) {
-  right: 21.3%;
-  bottom: 4%;
-
-  font-size: 37px;
-
-  transform: rotate(23deg);
-}
-
-.elements_cost:nth-child(5).elem_cost5 {
-  bottom: 0;
+  
+  &:first-child {
+    top: 14%;
+    left: 6.7%;
+  
+    font-size: 48px;
+  
+    transform: rotate(28deg);
+    
+    &.elem_cost1 {
+      top: 0;
+      left: 0;
+    }
+  }
+  
+  &:nth-child(2) {
+    top: 19%;
+    right:10.8%;
+  
+    font-size: 40px;
+  
+    transform: rotate(-22deg);
+    
+    &.elem_cost2 {
+      right: 0;
+    }
+  }
+  
+  &:nth-child(3) {
+    bottom: 12%;
+    left: 12.8%;
+  
+    font-size: 57px;
+  
+    transform: rotate(15deg);
+    
+    &.elem_cost3 {
+      bottom: 0;
+    }
+  }
+  
+  &:nth-child(4) {
+    right: 5.6%;
+    bottom: 12%;
+  
+    font-size: 50px;
+  
+    transform: rotate(-20deg);
+    
+    &.elem_cost4 {
+      right: 0;
+    }
+  }
+  
+  &:nth-child(5) {
+    right: 21.3%;
+    bottom: 4%;
+  
+    font-size: 37px;
+  
+    transform: rotate(23deg);
+    
+    &.elem_cost5 {
+      bottom: 0;
+    }
+  }
 }
 
 .cost_wrap {
@@ -96,10 +96,10 @@
   font-size: 45px;
   font-weight: 700;
   line-height: 1.37;
-}
-
-.cost_title::after {
-  content: "*";
+  
+  &::after {
+    content: "*";
+  }
 }
 
 .cost_subtitle {
@@ -111,14 +111,14 @@
 
   font-size: 18px;
   line-height: 1.69;
-}
-
-.cost_subtitle::before {
-  content: "* ";
-
-   position: absolute;
-  left: 0px;
-  top: 0;
-
-  display: block;
+  
+  ::before {
+    content: "* ";
+  
+    position: absolute;
+    left: 0px;
+    top: 0;
+  
+    display: block;
+  }
 }

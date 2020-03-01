@@ -3,9 +3,9 @@
 
   text-align: center;
 
-  background-color: #31293c;
-}
-
-.copyright_text {
-  color: #fff;
+  background-color: $copy-bg;
+  
+  &_text {
+    color: #fff;
+  }
 }
